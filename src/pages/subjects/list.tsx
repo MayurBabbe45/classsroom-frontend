@@ -32,7 +32,7 @@ const SubjectsList = () => {
             permanent:[...departmentFilters, ...searchFilters]
         },
         sorters: {
-            intial:[
+            initial:[
                 {field:'id',order:'desc'}
             ]
         }
@@ -91,6 +91,7 @@ const SubjectsList = () => {
                         placeholder='Search by name'
                         className='pl-10 w-full'
                         value={searchQuery}
+                        onChange={(e) => setsearchQuery(e.target.value)}
                     />
                 </div>
                 <div className='flex gap-2 w-full sm:w-auto'>
